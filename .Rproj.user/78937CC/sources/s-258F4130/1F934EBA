@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1592403300945.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2252344529",
+    "id" : "1F934EBA",
+    "lastKnownWriteTime" : 1592405021,
+    "last_content_update" : 1592405021446,
+    "path" : "~/Documents/Projects/MarkerGeneAnalysis/R/Taxonomy_Plots.R",
+    "project_path" : "R/Taxonomy_Plots.R",
+    "properties" : {
+        "cursorPosition" : "68,9",
+        "scrollLine" : "51"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,16 @@
+Package: MarkerGeneAnalysis
+Type: Package
+Title: 16S Dada2 ASV Marker Gene Analysis
+Version: 0.1.0
+Authors@R: person("Gould", "Trevor", email = "goul0109@umn.edu",
+  role = c("aut", "cre"))
+Description: 16S Dada2 ASV Marker Gene Analysis
+License: MIT License
+Encoding: UTF-8
+LazyData: true
+Imports:
+		vegan,
+		reshape2,
+		ggplot2,
+		grid,
+		gridExtra

@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1592403301452.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "8F6E244B",
+    "lastKnownWriteTime" : 1592405375,
+    "last_content_update" : 1592405375082,
+    "path" : "~/Documents/Projects/MarkerGeneAnalysis/R/sequence_count_plot.R",
+    "project_path" : "R/sequence_count_plot.R",
+    "properties" : {
+        "cursorPosition" : "11,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

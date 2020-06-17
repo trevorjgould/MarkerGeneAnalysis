@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1592403300858.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2078381415",
+    "id" : "B84172D9",
+    "lastKnownWriteTime" : 1592405339,
+    "last_content_update" : 1592405339733,
+    "path" : "~/Documents/Projects/MarkerGeneAnalysis/R/Diversity_Plots.R",
+    "project_path" : "R/Diversity_Plots.R",
+    "properties" : {
+        "cursorPosition" : "4,1",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
