@@ -42,4 +42,5 @@ write.table(OT, file = "Order_taxonomy.txt", quote = FALSE, sep = "\t")
 write.table(FT, file = "Family_taxonomy.txt", quote = FALSE, sep = "\t")
 write.table(GT, file = "Genus_taxonomy.txt", quote = FALSE, sep = "\t")
 write.table(ST, file = "Species_taxonomy.txt", quote = FALSE)
+return(list(KT=KT,PT=PT,CT=CT,OT=OT,FT=FT,GT=GT,ST=ST))
 }

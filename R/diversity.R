@@ -46,4 +46,5 @@ brayWmeta$shannon <- vegan::diversity(propdist, index = "shannon")
 brayWmeta$simpson <- vegan::diversity(propdist, index = "simpson")
 brayWmeta$invsimpson <- vegan::diversity(propdist, index = "invsimpson")
 write.table(brayWmeta, file="proportional_diversity_stats.txt", quote = FALSE)
+return(brayWmeta)
 }
