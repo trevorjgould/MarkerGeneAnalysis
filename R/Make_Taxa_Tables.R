@@ -1,9 +1,12 @@
 #' @export
+#' @importFrom plyr ddply
+#' @importFrom plyr numcolwise
 #Setup and Functions
 #library(plyr)
 #library(dplyr)
 #library(tidyr)
-Make_Taxa_Tables <- function(newmap,newtable){
+Make_Taxa_Tables <- function(newmap,y){
+combined_taxa <- as.data.frame(y)
 # taxonomy_tables
 # files to use for taxa:
 # metadata table
@@ -13,21 +16,22 @@ Make_Taxa_Tables <- function(newmap,newtable){
 
 #make split taxa tables
 levels <- c("domain","phylum","class","order","family","genus","species")
-n <- (ncol(newtable) - 7)
-Domain_table <- newtable %>% select(domain,1:n)
-Phylum_table <- newtable %>% select(phylum,1:n)
-Class_table <- newtable %>% select(class,1:n)
-Order_table <- newtable %>% select(order,1:n)
-Family_table <- newtable %>% select(family,1:n)
-Genus_table <- newtable %>% select(genus,1:n)
-Species_table <- newtable %>% select(species,1:n)
-KT <- ddply(Domain_table, "newtable$domain", numcolwise(sum))
-PT <- ddply(Phylum_table, "newtable$phylum", numcolwise(sum))
-CT <- ddply(Class_table, "newtable$class", numcolwise(sum))
-OT <- ddply(Order_table, "newtable$order", numcolwise(sum))
-FT <- ddply(Family_table, "newtable$family", numcolwise(sum))
-GT <- ddply(Genus_table, "newtable$genus", numcolwise(sum))
-ST <- ddply(Species_table, "newtable$species", numcolwise(sum))
+n <- (ncol(combined_taxa) - 7)
+`%>%` <- dplyr::`%>%`
+Domain_table <- combined_taxa %>% dplyr::select(domain,1:n)
+Phylum_table <- combined_taxa %>% dplyr::select(phylum,1:n)
+Class_table <- combined_taxa %>% dplyr::select(class,1:n)
+Order_table <- combined_taxa %>% dplyr::select(order,1:n)
+Family_table <- combined_taxa %>% dplyr::select(family,1:n)
+Genus_table <- combined_taxa %>% dplyr::select(genus,1:n)
+Species_table <- combined_taxa %>% dplyr::select(species,1:n)
+KT <- ddply(Domain_table, "combined_taxa$domain", numcolwise(sum))
+PT <- ddply(Phylum_table, "combined_taxa$phylum", numcolwise(sum))
+CT <- ddply(Class_table, "combined_taxa$class", numcolwise(sum))
+OT <- ddply(Order_table, "combined_taxa$order", numcolwise(sum))
+FT <- ddply(Family_table, "combined_taxa$family", numcolwise(sum))
+GT <- ddply(Genus_table, "combined_taxa$genus", numcolwise(sum))
+ST <- ddply(Species_table, "combined_taxa$species", numcolwise(sum))
 KT = setNames(data.frame(t(KT[,-1])), KT[,1])
 PT = setNames(data.frame(t(PT[,-1])), PT[,1])
 CT = setNames(data.frame(t(CT[,-1])), CT[,1])

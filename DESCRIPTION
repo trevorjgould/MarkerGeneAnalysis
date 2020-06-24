@@ -13,5 +13,7 @@ Imports:
 		reshape2,
 		ggplot2,
 		grid,
-		gridExtra
+		gridExtra,
+		plyr,
+		dplyr
 		
