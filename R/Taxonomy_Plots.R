@@ -53,19 +53,13 @@ if(a!=b){
 }
 both <- cbind(XT_other,meta)
 both$Samples <- row.names(meta)
-melted <- reshape2::melt(both, id.vars = c(colnames(meta)))
-p <- ggplot2::ggplot(melted, aes(Samples, (value*100), fill = variable)) + geom_bar(stat='identity')+ ylab("Percent") + theme_bw() + theme(legend.position = "bottom") + theme(axis.text.x = element_text(angle = 90, hjust = 1)) + scale_fill_discrete(name = name_label)
-
-#V1p <- p + facet_grid(.~V1, scales = "free_x")
-#V2p <- p + facet_grid(.~V2, scales = "free_x")
-#V3p <- p + facet_grid(.~V3, scales = "free_x")
-#filename = paste0(name_label,"-",x,"-V1_split_taxonomy_other.png")
-#filename2 = paste0(name_label,"-",x,"-V2_split_taxonomy_other.png")
-#filename3 = paste0(name_label,"-",x,"-V3_split_taxonomy_other.png")
-#ggsave(V1p, file = filename, dpi  = 800, width = 10, height = 8, units = "in")
-#ggsave(V2p, file = filename2, dpi  = 800, width = 10, height = 8, units = "in")
-#ggsave(V3p, file = filename3, dpi  = 800, width = 10, height = 8, units = "in")
-filename <- paste0(name_label,"_taxonomy_other.png")
+melted <- reshape2::melt(both, id.vars = c(colnames(meta),"Samples"))
+p <- ggplot2::ggplot(melted, ggplot2::aes(Samples, (value*100), fill = variable)) + ggplot2::geom_bar(stat='identity')+ ggplot2::ylab("Percent") + ggplot2::theme_bw() + ggplot2::theme(legend.position = "bottom") + ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 90, hjust = 1)) + ggplot2::scale_fill_discrete(name = name_label)
 ggplot2::ggsave(p, file = filename, dpi  = 800, width = 10, height = 8, units = "in")
+
+#V1p <- p + ggplot2::facet_grid(.~ var1, scales = "free_x")
+#filename = paste0(name_label,"-",x,"-V1_split_taxonomy_other.png")
+#ggplot2::ggsave(V1p, file = filename, dpi  = 800, width = 10, height = 8, units = "in")
+#filename <- paste0(name_label,"_taxonomy_other.png")
 }
 }

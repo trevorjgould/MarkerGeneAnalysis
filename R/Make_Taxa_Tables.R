@@ -13,9 +13,8 @@
 
 
 # reads in table from Make_Tables.R
-combined_taxa <- read.table(file = "combined_sequences_taxa.txt", sep = "\t")
 Make_Taxa_Tables <- function(newmap,y){
-combined_taxa <- as.data.frame(y)
+combined_taxa <- read.table(file = "combined_sequences_taxa.txt", sep = "\t")
 # taxonomy_tables
 # files to use for taxa:
 # metadata table
