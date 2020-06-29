@@ -5,12 +5,12 @@
 Taxonomy_Plots <- function(meta){
 # read in tables
 #meta <- read.table("Metadata_common.txt", sep = "\t", check.names = FALSE)
-KT <- read.table(KT, file = "Kingdom_taxonomy.txt", sep = "\t", check.names = FALSE)
-PT <- read.table(PT, file = "Phylum_taxonomy.txt", sep = "\t", check.names = FALSE)
-CT <- read.table(CT, file = "Class_taxonomy.txt", sep = "\t", check.names = FALSE)
-OT <- read.table(OT, file = "Order_taxonomy.txt", sep = "\t", check.names = FALSE)
-FT <- read.table(FT, file = "Family_taxonomy.txt", sep = "\t", check.names = FALSE)
-GT <- read.table(GT, file = "Genus_taxonomy.txt", sep = "\t", check.names = FALSE)
+KT <- read.table(file = "Kingdom_taxonomy.txt", sep = "\t", check.names = FALSE)
+PT <- read.table(file = "Phylum_taxonomy.txt", sep = "\t", check.names = FALSE)
+CT <- read.table(file = "Class_taxonomy.txt", sep = "\t", check.names = FALSE)
+OT <- read.table(file = "Order_taxonomy.txt", sep = "\t", check.names = FALSE)
+FT <- read.table(file = "Family_taxonomy.txt", sep = "\t", check.names = FALSE)
+GT <- read.table(file = "Genus_taxonomy.txt", sep = "\t", check.names = FALSE)
 
 # Here we are taking the taxonomy tables created above
 # taxa with less than a sum of 0.1 total proportion over all samples are merged
