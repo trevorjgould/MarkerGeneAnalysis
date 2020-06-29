@@ -12,12 +12,12 @@ newmap$count <- rowSums(newtable)
 
 # 0 out NA cells
 newtable[is.na(newtable)] <- 0
-
+newtable2 <- t(newtable)
 ## clr + imputation function
 ## Borrowed from Gabe
 ## Note, this assumes taxa as rows and samples as columns
-clr_transform <- function(taxa){
-  clr.taxa <- taxa
+clr_transform <- function(x){
+  clr.taxa <- x
   clr.taxa = t(clr.taxa); eps = 0.5
   clr.taxa = clr.taxa*(1 -rowSums(clr.taxa==0)*eps/rowSums(clr.taxa))
   clr.taxa[clr.taxa==0]=eps
@@ -28,7 +28,7 @@ clr_transform <- function(taxa){
   return(clr.taxa)
 }
 
-data.CLR <- clr_transform(newtable)
+data.CLR <- clr_transform(newtable2)
 data.CLR <- t(data.CLR)
 
 #PCA
