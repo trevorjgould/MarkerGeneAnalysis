@@ -1,10 +1,19 @@
 #' @export
-#' @importFrom plyr ddply
-#' @importFrom plyr numcolwise
+#' @import plyr
+#' @importfrom dplyr across
+#' @importfrom plyr numcolwise
 #Setup and Functions
 #library(plyr)
 #library(dplyr)
 #library(tidyr)
+
+
+# USAGE
+# taxa <- Make_Taxa_Tables(outtab$newmap, combined_taxa)
+
+
+# reads in table from Make_Tables.R
+combined_taxa <- read.table(file = "combined_sequences_taxa.txt", sep = "\t")
 Make_Taxa_Tables <- function(newmap,y){
 combined_taxa <- as.data.frame(y)
 # taxonomy_tables
@@ -25,13 +34,13 @@ Order_table <- combined_taxa %>% dplyr::select(order,1:n)
 Family_table <- combined_taxa %>% dplyr::select(family,1:n)
 Genus_table <- combined_taxa %>% dplyr::select(genus,1:n)
 Species_table <- combined_taxa %>% dplyr::select(species,1:n)
-KT <- ddply(Domain_table, "combined_taxa$domain", numcolwise(sum))
-PT <- ddply(Phylum_table, "combined_taxa$phylum", numcolwise(sum))
-CT <- ddply(Class_table, "combined_taxa$class", numcolwise(sum))
-OT <- ddply(Order_table, "combined_taxa$order", numcolwise(sum))
-FT <- ddply(Family_table, "combined_taxa$family", numcolwise(sum))
-GT <- ddply(Genus_table, "combined_taxa$genus", numcolwise(sum))
-ST <- ddply(Species_table, "combined_taxa$species", numcolwise(sum))
+KT <- plyr::ddply(Domain_table, "combined_taxa$domain", plyr::numcolwise(sum))
+PT <- plyr::ddply(Phylum_table, "combined_taxa$phylum", numcolwise(sum))
+CT <- plyr::ddply(Class_table, "combined_taxa$class", numcolwise(sum))
+OT <- plyr::ddply(Order_table, "combined_taxa$order", numcolwise(sum))
+FT <- plyr::ddply(Family_table, "combined_taxa$family", numcolwise(sum))
+GT <- plyr::ddply(Genus_table, "combined_taxa$genus", numcolwise(sum))
+ST <- plyr::ddply(Species_table, "combined_taxa$species", numcolwise(sum))
 KT = setNames(data.frame(t(KT[,-1])), KT[,1])
 PT = setNames(data.frame(t(PT[,-1])), PT[,1])
 CT = setNames(data.frame(t(CT[,-1])), CT[,1])

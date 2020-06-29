@@ -5,11 +5,11 @@
 #   Test Package:              'Cmd + Shift + T'
 Make_Tables <- function(inputtable,metadata,taxa){
 # input tables
-#inputtable <- readRDS('seqtab_nochim.rds')
+# t1 <- readRDS('seqtab_nochim.rds')
 # input metadata
-#metadata <- read.table('metadata.txt', sep = '\t', comment='', head=TRUE, row.names=1, check.names = FALSE)
+# t2 <- read.table('metadata.txt', sep = '\t', comment='', head=TRUE, row.names=1, check.names = FALSE)
 # taxonomy
-#taxa <- readRDS("taxID.rds")
+# t3 <- readRDS("taxID.rds")
 # need to make a working directory and write into that not the library directory
 # outtab <- Make_Tables(t1,t2,t3)
 #find common names
