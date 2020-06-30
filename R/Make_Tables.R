@@ -1,4 +1,17 @@
+#' Make Tables
+#'
+#' This function processes dada2 output and returns tables for plots and stats
+#'
 #' @export
+#' @examples
+#' # input dada2 sequence table
+#' t1 <- readRDS('seqtab_nochim.rds')
+#' # input metadata
+#' t2 <- read.table('metadata.txt', sep = '\t', comment='', head=TRUE, row.names=1, check.names = FALSE)
+#' # input taxonomy
+#' t3 <- readRDS("taxID.rds")
+
+#' outtab <- Make_Tables(t1,t2,t3)
 
 #   Build and Reload Package:  'Cmd + Shift + B'
 #   Check Package:             'Cmd + Shift + E'

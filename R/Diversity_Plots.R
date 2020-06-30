@@ -1,9 +1,11 @@
+#' Diversity Plots
+#'
+#' This function creates plots that summarize alpha and beta diversity
 #' @export
 #' @importFrom gridExtra grid.arrange
-#library(ggplot2)
-#library(reshape2)
-#library(gridExtra)
-#library(grid)
+#' @examples
+#' Diversity_Plots(brayWmeta, outtab$newmap)
+
 kelly_colors <- c("plum4", "darkorange1", "firebrick", "gold2", "burlywood3", "gray51", "springgreen4", "lightpink2", "deepskyblue4", "lightsalmon2", "mediumpurple4", "orange", "maroon", "yellow3", "brown4", "yellow4", "sienna4", "chocolate", "gray19","#74c476", "lightskyblue2")
 # read in files
 Diversity_Plots <- function(brayWmeta,newmap){

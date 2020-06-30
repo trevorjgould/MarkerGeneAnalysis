@@ -1,14 +1,14 @@
+#' Make Taxa Tables
+#'
+#' This function creates taxa tables from dada2 output
+#'
 #' @export
 #' @import plyr
 #' @importfrom dplyr across
 #' @importfrom plyr numcolwise
-#Setup and Functions
-#library(plyr)
-#library(dplyr)
-#library(tidyr)
+#' @example
+#' taxa_out <- Make_Taxa_Tables(outtab$newmap, combined_taxa)
 
-
-# USAGE
 # taxa <- Make_Taxa_Tables(outtab$newmap, combined_taxa)
 
 

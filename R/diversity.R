@@ -1,7 +1,11 @@
+#' Diversity Stats
+#'
+#' This function runs stats for alpha and beta diversity
+#'
 #' @export
-#library(plyr)
-#library(dplyr)
-#library(tidyr)
+#' @examples
+#' diversity(outtab$newmap,outtab$newtable)
+
 # metadata table
 diversity <- function(newmap,newtable){
 #newmap <- read.table("Metadata_common.txt")
