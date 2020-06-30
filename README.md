@@ -16,6 +16,8 @@
 
 
 **Example:**
+```
+{
 # input dada2 sequence table
 t1 <- readRDS('seqtab_nochim.rds')
 # input metadata
@@ -32,7 +34,8 @@ sequence_count_table <- read.delim("sequence_process_summary.txt", row.names=1)
 sequence_count_plot(sequence_count_table)
 diversity(outtab$newmap,outtab$newtable)
 Diversity_Plots(brayWmeta, outtab$newmap)
-
+}
+```
 
 **Run Dada2**
 input | output
