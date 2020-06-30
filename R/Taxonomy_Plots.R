@@ -1,7 +1,11 @@
+#' Taxonomy Plots
+#'
+#' This function creates plots that summarize prevalent taxa
 #' @export
-#load libraries
-#library(ggplot2)
-#library(reshape2)
+#' @examples
+#' Taxonomy_Plots(outtab$newtable)
+
+
 Taxonomy_Plots <- function(meta){
 # read in tables
 #meta <- read.table("Metadata_common.txt", sep = "\t", check.names = FALSE)
