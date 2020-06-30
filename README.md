@@ -14,6 +14,26 @@
 - User Provided
   - metadata.txt
 
+
+**Example:**
+# input dada2 sequence table
+t1 <- readRDS('seqtab_nochim.rds')
+# input metadata
+t2 <- read.table('metadata.txt', sep = '\t', comment='', head=TRUE, row.names=1, check.names = FALSE)
+# input taxonomy
+t3 <- readRDS("taxID.rds")
+
+outtab <- Make_Tables(t1,t2,t3)
+combined_taxa <- read.table(file = "combined_sequences_taxa.txt", sep = "\t")
+
+taxa_out <- Make_Taxa_Tables(outtab$newmap, combined_taxa)
+sequence_count_table <- read.delim("sequence_process_summary.txt", row.names=1)
+
+sequence_count_plot(sequence_count_table)
+diversity(outtab$newmap,outtab$newtable)
+Diversity_Plots(brayWmeta, outtab$newmap)
+
+
 **Run Dada2**
 input | output
 --------- | ---------
@@ -64,9 +84,9 @@ Metadata_common.txt |
 **Diversity_plots.R**
 input | output
 --------- | ---------
-proportional_diversity_stats.txt | 
+proportional_diversity_stats.txt | various plots
 
 **Sequence_count_plot.R**
 input | output
 --------- | ---------
-final_sequence_count.txt | sequence_count_plot.png
+sequence_process_summary.txt | sequence_count_plot.png
