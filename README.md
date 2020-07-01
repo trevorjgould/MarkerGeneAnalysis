@@ -1,4 +1,4 @@
-![logo](/images/Picture1.png)
+![logo](/man/images/Picture1.png)
 **The output from this pipeline is:**
 1) combined tables for use in analysis
 2) plots
@@ -18,11 +18,11 @@
 **Example:**
 ```
 # input dada2 sequence table
-t1 <- readRDS('seqtab_nochim.rds')
+t1 <- readRDS('/man/example_data/seqtab_nochim.rds')
 # input metadata
-t2 <- read.table('metadata.txt', sep = '\t', comment='', head=TRUE, row.names=1, check.names = FALSE)
+t2 <- read.table('/man/example_data/metadata.txt', sep = '\t', comment='', head=TRUE, row.names=1, check.names = FALSE)
 # input taxonomy
-t3 <- readRDS("taxID.rds")
+t3 <- readRDS("/man/example_data/taxID.rds")
 
 outtab <- Make_Tables(t1,t2,t3)
 combined_taxa <- read.table(file = "combined_sequences_taxa.txt", sep = "\t")
