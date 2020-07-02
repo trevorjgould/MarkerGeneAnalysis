@@ -14,20 +14,6 @@ brayWmeta <- read.table('proportional_diversity_stats.txt')
 var_explained = (brayWmeta$EV/sum(brayWmeta$EV))*100
 var_explained = format(round(var_explained, 2), nsmall = 2)
 
-# functions
-grid_arrange_shared_legend <- function(...) {
-    plots <- list(...)
-    g <- ggplot2::ggplotGrob(plots[[1]] + ggplot2::theme(legend.position="bottom"))$grobs
-    legend <- g[[which(sapply(g, function(x) x$name) == "guide-box")]]
-    lheight <- sum(legend$height)
-    grid.arrange(
-        do.call(arrangeGrob, lapply(plots, function(x)
-            x + theme(legend.position="none"))),
-        legend,
-        ncol = 1,
-        heights = unit.c(unit(1, "npc") - lheight, lheight))
-}
-
 Adiv <- function(x) {
     ShanD <- ggplot2::ggplot(brayWmeta, ggplot2::aes_string(x, brayWmeta$shannon, colour = x)) + ggplot2::geom_boxplot(outlier.shape = NA) + ggplot2::geom_point(position=ggplot2::position_jitterdodge(),alpha=0.3)+ ggplot2::theme_bw() + ggplot2::theme(legend.position = "NA") + ggplot2::ylab("Shannon") + ggplot2::theme(axis.title.x=ggplot2::element_blank(), axis.text.x=ggplot2::element_blank(),axis.ticks.x=ggplot2::element_blank())
     SimD <- ggplot2::ggplot(brayWmeta, ggplot2::aes_string(x, brayWmeta$simpson, colour = x)) + ggplot2::geom_boxplot(outlier.shape = NA) + ggplot2::geom_point(position=ggplot2::position_jitterdodge(),alpha=0.3)+ ggplot2::theme_bw() + ggplot2::theme(legend.position = "NA") + ggplot2::ylab("Simpson") + ggplot2::theme(axis.title.x=ggplot2::element_blank(), axis.text.x=ggplot2::element_blank(),axis.ticks.x=ggplot2::element_blank())

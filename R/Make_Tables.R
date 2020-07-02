@@ -4,6 +4,7 @@
 #'
 #' @export
 #' @examples
+#'
 #' # input dada2 sequence table
 #' t1 <- readRDS('seqtab_nochim.rds')
 #' # input metadata
@@ -12,6 +13,9 @@
 #' t3 <- readRDS("taxID.rds")
 
 #' outtab <- Make_Tables(t1,t2,t3)
+
+# avoiding: no visible binding for global variable
+utils::globalVariables(c("domain", "phylum" , "family" , "genus" , "species" , "samples" , "value" , "variable" , "Samples"))
 
 #   Build and Reload Package:  'Cmd + Shift + B'
 #   Check Package:             'Cmd + Shift + E'
