@@ -6,6 +6,10 @@
 \usage{
 Make_Taxa_Tables(newmap)
 }
+\arguments{
+\item{newmap}{(Required).
+table of metadata processed by Make_Tables.}
+}
 \description{
 This function creates taxa tables from dada2 output
 }

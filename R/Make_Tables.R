@@ -3,6 +3,7 @@
 #' This function processes dada2 output and returns tables for plots and stats
 #'
 #' @export
+#'
 #' @examples
 #' # input dada2 sequence table
 #' t1 <- readRDS('seqtab_nochim.rds')

@@ -7,7 +7,11 @@
 diversity(newmap, newtable)
 }
 \arguments{
-\item{newmap}{newtable}
+\item{newmap}{(Required).
+table of metadata.}
+
+\item{newtable}{(Required).
+table of data.}
 }
 \description{
 This function runs stats for alpha and beta diversity

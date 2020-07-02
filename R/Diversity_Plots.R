@@ -3,6 +3,7 @@
 #' This function creates plots that summarize alpha and beta diversity
 #' @export
 #' @importFrom gridExtra grid.arrange
+#'
 #' @examples
 #' Diversity_Plots(brayWmeta, outtab$newmap)
 

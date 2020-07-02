@@ -6,6 +6,10 @@
 \usage{
 Taxonomy_Plots(meta)
 }
+\arguments{
+\item{meta}{(Required)
+table of metadata.}
+}
 \description{
 This function creates plots that summarize prevalent taxa
 }

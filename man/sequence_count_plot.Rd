@@ -6,6 +6,10 @@
 \usage{
 sequence_count_plot(sct)
 }
+\arguments{
+\item{sct}{(Required).
+the table containing data to plot.}
+}
 \description{
 this function creates a summary plot of sequence counts
 }
