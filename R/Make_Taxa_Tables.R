@@ -4,12 +4,8 @@
 #'
 #' @export
 #' @import plyr
-#' @importfrom plyr numcolwise
 #' @example
 #' taxa_out <- Make_Taxa_Tables(outtab$newmap, combined_taxa)
-
-# taxa <- Make_Taxa_Tables(outtab$newmap, combined_taxa)
-
 
 # reads in table from Make_Tables.R
 Make_Taxa_Tables <- function(newmap,y){

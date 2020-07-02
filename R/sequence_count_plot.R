@@ -3,7 +3,7 @@
 #' this function creates a summary plot of sequence counts
 #'
 #' @export
-#' @example
+#' @examples
 #' sequence_count_table <- read.delim("sequence_process_summary.txt", row.names=1)
 #' sequence_count_plot(sequence_count_table)
 
