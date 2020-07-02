@@ -3,6 +3,12 @@
 #' This function runs stats for alpha and beta diversity
 #'
 #' @export
+#' @param newmap (Required).
+#'  table of metadata.
+#'
+#' @param newtable (Required).
+#'  table of data.
+#'
 #' @examples
 #' diversity(outtab$newmap,outtab$newtable)
 

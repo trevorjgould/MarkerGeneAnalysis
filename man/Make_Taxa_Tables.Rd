@@ -4,7 +4,7 @@
 \alias{Make_Taxa_Tables}
 \title{Make Taxa Tables}
 \usage{
-Make_Taxa_Tables(newmap, y)
+Make_Taxa_Tables(newmap)
 }
 \description{
 This function creates taxa tables from dada2 output

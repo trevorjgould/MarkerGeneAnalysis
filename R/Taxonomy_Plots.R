@@ -2,6 +2,9 @@
 #'
 #' This function creates plots that summarize prevalent taxa
 #' @export
+#' @param meta (Required)
+#'  table of metadata.
+#'
 #' @examples
 #' Taxonomy_Plots(outtab$newtable)
 

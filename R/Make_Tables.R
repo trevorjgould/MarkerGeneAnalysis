@@ -4,14 +4,12 @@
 #'
 #' @export
 #' @examples
-#'
 #' # input dada2 sequence table
 #' t1 <- readRDS('seqtab_nochim.rds')
 #' # input metadata
 #' t2 <- read.table('metadata.txt', sep = '\t', comment='', head=TRUE, row.names=1, check.names = FALSE)
 #' # input taxonomy
 #' t3 <- readRDS("taxID.rds")
-
 #' outtab <- Make_Tables(t1,t2,t3)
 
 # avoiding: no visible binding for global variable

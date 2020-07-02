@@ -6,6 +6,9 @@
 \usage{
 diversity(newmap, newtable)
 }
+\arguments{
+\item{newmap}{newtable}
+}
 \description{
 This function runs stats for alpha and beta diversity
 }

@@ -3,12 +3,14 @@
 #' This function creates taxa tables from dada2 output
 #'
 #' @export
+#' @param newmap (Required).
+#'  table of metadata processed by Make_Tables.
 #' @import plyr
 #' @example
-#' taxa_out <- Make_Taxa_Tables(outtab$newmap, combined_taxa)
+#' taxa_out <- Make_Taxa_Tables(outtab$newmap)
 
 # reads in table from Make_Tables.R
-Make_Taxa_Tables <- function(newmap,y){
+Make_Taxa_Tables <- function(newmap){
 combined_taxa <- read.table(file = "combined_sequences_taxa.txt", sep = "\t")
 # taxonomy_tables
 # files to use for taxa:
