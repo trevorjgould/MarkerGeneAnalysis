@@ -1,6 +1,7 @@
 #' Diversity Plots
 #'
 #' This function creates plots that summarize alpha and beta diversity
+#'
 #' @export
 #' @importFrom gridExtra grid.arrange
 #'

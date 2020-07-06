@@ -16,9 +16,6 @@
 # avoiding: no visible binding for global variable
 utils::globalVariables(c("domain", "phylum" , "family" , "genus" , "species" , "samples" , "value" , "variable" , "Samples"))
 
-#   Build and Reload Package:  'Cmd + Shift + B'
-#   Check Package:             'Cmd + Shift + E'
-#   Test Package:              'Cmd + Shift + T'
 Make_Tables <- function(inputtable,metadata,taxa){
 # input tables
 #t1 <- readRDS('seqtab_nochim.rds')
