@@ -6,12 +6,13 @@
 #' @param newmap (Required).
 #'  table of metadata processed by Make_Tables.
 #' @import plyr
+#' @importFrom stats setNames
 #' @example
-#' taxa_out <- Make_Taxa_Tables(outtab$newmap)
+#' taxa_out <- Make_Taxa_Tables("combined_sequences_taxa.txt")
 
 # reads in table from Make_Tables.R
-Make_Taxa_Tables <- function(newmap){
-combined_taxa <- read.table(file = "combined_sequences_taxa.txt", sep = "\t")
+Make_Taxa_Tables <- function(x){
+combined_taxa <- read.table(file = x, sep = "\t")
 # taxonomy_tables
 # files to use for taxa:
 # metadata table

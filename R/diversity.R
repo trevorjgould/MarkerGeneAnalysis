@@ -3,6 +3,7 @@
 #' This function runs stats for alpha and beta diversity
 #'
 #' @export
+#' @importFrom stats prcomp
 #' @param newmap (Required).
 #'  table of metadata.
 #'

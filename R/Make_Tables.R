@@ -6,25 +6,17 @@
 #'
 #' @examples
 #' # input dada2 sequence table
-#' t1 <- readRDS('seqtab_nochim.rds')
+#' t1 <- readRDS('/man/example_data/seqtab_nochim.rds')
 #' # input metadata
-#' t2 <- read.table('metadata.txt', sep = '\t', comment='', head=TRUE, row.names=1, check.names = FALSE)
+#' t2 <- read.table('/man/example_data/metadata.txt', sep = '\t', comment='', head=TRUE, row.names=1, check.names = FALSE)
 #' # input taxonomy
-#' t3 <- readRDS("taxID.rds")
+#' t3 <- readRDS("/man/example_data/taxID.rds")
 #' outtab <- Make_Tables(t1,t2,t3)
 
-# avoiding: no visible binding for global variable
+# avoiding no visible binding for global variable
 utils::globalVariables(c("domain", "phylum" , "family" , "genus" , "species" , "samples" , "value" , "variable" , "Samples"))
 
 Make_Tables <- function(inputtable,metadata,taxa){
-# input tables
-#t1 <- readRDS('seqtab_nochim.rds')
-# input metadata
-#t2 <- read.table('metadata.txt', sep = '\t', comment='', head=TRUE, row.names=1, check.names = FALSE)
-# taxonomy
-#t3 <- readRDS("taxID.rds")
-# need to make a working directory and write into that not the library directory
-#outtab <- Make_Tables(t1,t2,t3)
 #find common names
 common <- intersect(rownames(metadata),rownames(inputtable))
 # get just the overlapping samples
@@ -38,5 +30,5 @@ newtable1 <- t(newtable)
 both <- cbind(newtable1,taxa)
 #save to file
 write.table(both, file = "combined_sequences_taxa.txt", sep = "\t", quote = FALSE)
-return(list(newtable = newtable, newmap = newmap, combined_taxa = (both)))
+return(list(newtable = newtable, newmap = newmap, combined_taxa = both))
 }

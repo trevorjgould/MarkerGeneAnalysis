@@ -4,7 +4,7 @@
 \alias{Make_Taxa_Tables}
 \title{Make Taxa Tables}
 \usage{
-Make_Taxa_Tables(newmap)
+Make_Taxa_Tables(x)
 }
 \arguments{
 \item{newmap}{(Required).

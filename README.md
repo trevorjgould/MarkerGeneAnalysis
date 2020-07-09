@@ -27,7 +27,7 @@ t3 <- readRDS("/man/example_data/taxID.rds")
 outtab <- Make_Tables(t1,t2,t3)
 combined_taxa <- read.table(file = "combined_sequences_taxa.txt", sep = "\t")
 
-taxa_out <- Make_Taxa_Tables(outtab$newmap, combined_taxa)
+taxa_out <- Make_Taxa_Tables("combined_sequences_taxa.txt")
 Taxonomy_Plots(outtab$newtable)
 sequence_count_table <- read.delim("sequence_process_summary.txt", row.names=1)
 sequence_count_plot(sequence_count_table)

@@ -1,6 +1,7 @@
 #' Taxonomy Plots
 #'
 #' This function creates plots that summarize prevalent taxa
+#'
 #' @export
 #' @param meta (Required)
 #'  table of metadata.

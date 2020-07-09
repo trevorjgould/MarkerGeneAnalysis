@@ -4,7 +4,6 @@
 #'
 #' @export
 #' @importFrom gridExtra grid.arrange
-#'
 #' @examples
 #' Diversity_Plots(brayWmeta, outtab$newmap)
 
