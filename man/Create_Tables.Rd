@@ -10,8 +10,8 @@ Create_Tables(inputtable, metadata, taxa)
 This function processes dada2 output and returns tables for plots and stats
 }
 \examples{
-inputtable <- readRDS('man/example_data/seqtab_nochim.rds')
-metadata <- read.table("man/example_data/metadata.txt", sep ='\t', comment='', head=TRUE, row.names=1, check.names=FALSE)
-taxa <- readRDS("man/example_data/taxID.rds")
+inputtable <- readRDS('data/seqtab_nochim.rds')
+metadata <- read.table("data/metadata.txt", sep ='\t', comment='', head=TRUE, row.names=1, check.names=FALSE)
+taxa <- readRDS("data/taxID.rds")
 outtab <- Create_Tables(t1,t2,t3)
 }

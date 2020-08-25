@@ -7,9 +7,9 @@
 #' @importFrom utils write.table
 #'
 #' @examples
-#' inputtable <- readRDS('seqtab_nochim.rds')
-#' metadata <- read.table("metadata.txt", sep ='\t', comment='', head=TRUE, row.names=1, check.names=FALSE)
-#' taxa <- readRDS("taxID.rds")
+#' inputtable <- readRDS('data/seqtab_nochim.rds')
+#' metadata <- read.table("data/metadata.txt", sep ='\t', comment='', head=TRUE, row.names=1, check.names=FALSE)
+#' taxa <- readRDS("data/taxID.rds")
 #' outtab <- Create_Tables(t1,t2,t3)
 
 Create_Tables <- function(inputtable,metadata,taxa){
