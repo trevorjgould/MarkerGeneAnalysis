@@ -5,10 +5,15 @@
 #' @export
 #' @param newmap (Required).
 #'  table of metadata processed by Make_Tables.
-#' @import plyr
+#' @importFrom plyr ddply
 #' @importFrom stats setNames
-#' @example
-#' taxa_out <- Make_Taxa_Tables("combined_sequences_taxa.txt")
+#' @importFrom utils read.table
+#' @importFrom utils write.table
+#' @examples
+#' taxa_out <- Make_Taxa_Tables("/man/example_data/combined_sequences_taxa.txt")
+
+# avoiding no visible binding for global variable
+domain <- phylum <- family <- genus <- species <- NULL
 
 # reads in table from Make_Tables.R
 Make_Taxa_Tables <- function(x){

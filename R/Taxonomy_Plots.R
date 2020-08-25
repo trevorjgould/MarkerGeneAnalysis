@@ -6,8 +6,13 @@
 #' @param meta (Required)
 #'  table of metadata.
 #'
+#' @importFrom utils read.table
+#'
 #' @examples
 #' Taxonomy_Plots(outtab$newtable)
+
+# avoiding no visible binding for global variable
+value <- variable <- Samples <- NULL
 
 
 Taxonomy_Plots <- function(meta){

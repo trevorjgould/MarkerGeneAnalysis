@@ -1,22 +1,18 @@
-#' Make Tables
+#' Create_Tables
 #'
 #' This function processes dada2 output and returns tables for plots and stats
 #'
 #' @export
 #'
+#' @importFrom utils write.table
+#'
 #' @examples
-#' # input dada2 sequence table
-#' t1 <- readRDS('/man/example_data/seqtab_nochim.rds')
-#' # input metadata
-#' t2 <- read.table('/man/example_data/metadata.txt', sep = '\t', comment='', head=TRUE, row.names=1, check.names = FALSE)
-#' # input taxonomy
-#' t3 <- readRDS("/man/example_data/taxID.rds")
-#' outtab <- Make_Tables(t1,t2,t3)
+#' inputtable <- readRDS('seqtab_nochim.rds')
+#' metadata <- read.table("metadata.txt", sep ='\t', comment='', head=TRUE, row.names=1, check.names=FALSE)
+#' taxa <- readRDS("taxID.rds")
+#' outtab <- Create_Tables(t1,t2,t3)
 
-# avoiding no visible binding for global variable
-utils::globalVariables(c("domain", "phylum" , "family" , "genus" , "species" , "samples" , "value" , "variable" , "Samples"))
-
-Make_Tables <- function(inputtable,metadata,taxa){
+Create_Tables <- function(inputtable,metadata,taxa){
 #find common names
 common <- intersect(rownames(metadata),rownames(inputtable))
 # get just the overlapping samples

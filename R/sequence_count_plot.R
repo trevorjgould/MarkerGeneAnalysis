@@ -10,6 +10,9 @@
 #' sequence_count_table <- read.delim("sequence_process_summary.txt", row.names=1)
 #' sequence_count_plot(sequence_count_table)
 
+# avoiding no visible binding for global variable
+value <- variable <- Samples <- NULL
+
 # sequence count plot
 sequence_count_plot <- function(sct){
 #sequence_count_table <- read.delim("final_sequence_count.txt", row.names=1)
