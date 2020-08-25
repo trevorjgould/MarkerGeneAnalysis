@@ -2,15 +2,13 @@
 #'
 #' This function creates taxa tables from dada2 output
 #'
-#' @export
 #' @param newmap (Required).
 #'  table of metadata processed by Make_Tables.
+#' @export
 #' @importFrom plyr ddply
 #' @importFrom stats setNames
 #' @importFrom utils read.table
 #' @importFrom utils write.table
-#' @examples
-#' taxa_out <- Make_Taxa_Tables("/man/example_data/combined_sequences_taxa.txt")
 
 # avoiding no visible binding for global variable
 domain <- phylum <- family <- genus <- species <- NULL

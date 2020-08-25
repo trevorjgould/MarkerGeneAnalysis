@@ -1,16 +1,13 @@
 #' Create_Tables
 #'
 #' This function processes dada2 output and returns tables for plots and stats
+#' @param inputtable table
+#' @param metadata table
+#' @param taxa table
 #'
 #' @export
 #'
 #' @importFrom utils write.table
-#'
-#' @examples
-#' inputtable <- readRDS('data/seqtab_nochim.rds')
-#' metadata <- read.table("data/metadata.txt", sep ='\t', comment='', head=TRUE, row.names=1, check.names=FALSE)
-#' taxa <- readRDS("data/taxID.rds")
-#' outtab <- Create_Tables(t1,t2,t3)
 
 Create_Tables <- function(inputtable,metadata,taxa){
 #find common names

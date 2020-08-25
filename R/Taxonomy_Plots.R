@@ -2,14 +2,11 @@
 #'
 #' This function creates plots that summarize prevalent taxa
 #'
-#' @export
+#'
 #' @param meta (Required)
 #'  table of metadata.
-#'
+#' @export
 #' @importFrom utils read.table
-#'
-#' @examples
-#' Taxonomy_Plots(outtab$newtable)
 
 # avoiding no visible binding for global variable
 value <- variable <- Samples <- NULL

@@ -6,12 +6,13 @@
 \usage{
 Create_Tables(inputtable, metadata, taxa)
 }
+\arguments{
+\item{inputtable}{table}
+
+\item{metadata}{table}
+
+\item{taxa}{table}
+}
 \description{
 This function processes dada2 output and returns tables for plots and stats
-}
-\examples{
-inputtable <- readRDS('data/seqtab_nochim.rds')
-metadata <- read.table("data/metadata.txt", sep ='\t', comment='', head=TRUE, row.names=1, check.names=FALSE)
-taxa <- readRDS("data/taxID.rds")
-outtab <- Create_Tables(t1,t2,t3)
 }

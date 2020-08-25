@@ -1,17 +1,15 @@
 #' Diversity Plots
 #'
 #' This function creates plots that summarize alpha and beta diversity
-#'
+#' @param brayWmeta table from diversity.R
+#' @param newmap table from Create_Tables.R
 #' @export
 #' @importFrom gridExtra grid.arrange
-#' @examples
-#' Diversity_Plots(brayWmeta, outtab$newmap)
 
-kelly_colors <- c("plum4", "darkorange1", "firebrick", "gold2", "burlywood3", "gray51", "springgreen4", "lightpink2", "deepskyblue4", "lightsalmon2", "mediumpurple4", "orange", "maroon", "yellow3", "brown4", "yellow4", "sienna4", "chocolate", "gray19","#74c476", "lightskyblue2")
 # read in files
 Diversity_Plots <- function(brayWmeta,newmap){
-brayWmeta <- read.table('proportional_diversity_stats.txt')
-#newmap <- read.table("Metadata_common.txt")
+# brayWmeta <- read.table('proportional_diversity_stats.txt')
+# newmap <- read.table("Metadata_common.txt")
 var_explained = (brayWmeta$EV/sum(brayWmeta$EV))*100
 var_explained = format(round(var_explained, 2), nsmall = 2)
 

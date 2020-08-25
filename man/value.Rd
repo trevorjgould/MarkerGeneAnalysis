@@ -26,9 +26,4 @@ This function creates plots that summarize prevalent taxa
 
 this function creates a summary plot of sequence counts
 }
-\examples{
-Taxonomy_Plots(outtab$newtable)
-sequence_count_table <- read.delim("sequence_process_summary.txt", row.names=1)
-sequence_count_plot(sequence_count_table)
-}
 \keyword{datasets}

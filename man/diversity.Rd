@@ -16,6 +16,3 @@ table of data.}
 \description{
 This function runs stats for alpha and beta diversity
 }
-\examples{
-diversity(outtab$newmap,outtab$newtable)
-}

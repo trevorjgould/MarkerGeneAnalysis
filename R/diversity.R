@@ -9,9 +9,6 @@
 #'
 #' @param newtable (Required).
 #'  table of data.
-#'
-#' @examples
-#' diversity(outtab$newmap,outtab$newtable)
 
 # metadata table
 diversity <- function(newmap,newtable){

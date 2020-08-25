@@ -17,7 +17,4 @@ table of metadata processed by Make_Tables.}
 \description{
 This function creates taxa tables from dada2 output
 }
-\examples{
-taxa_out <- Make_Taxa_Tables("/man/example_data/combined_sequences_taxa.txt")
-}
 \keyword{datasets}
