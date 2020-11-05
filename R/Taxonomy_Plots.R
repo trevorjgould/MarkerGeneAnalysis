@@ -5,6 +5,7 @@
 #'
 #' @param meta (Required)
 #'  table of metadata.
+#'
 #' @export
 #' @importFrom utils read.table
 

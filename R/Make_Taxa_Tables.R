@@ -4,6 +4,7 @@
 #'
 #' @param newmap (Required).
 #'  table of metadata processed by Make_Tables.
+#'
 #' @export
 #' @importFrom plyr ddply
 #' @importFrom stats setNames

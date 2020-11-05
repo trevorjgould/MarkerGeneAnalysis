@@ -5,6 +5,7 @@
 #'
 #' @param sct (Required).
 #'  the table containing data to plot.
+#'
 #' @export
 
 # avoiding no visible binding for global variable
