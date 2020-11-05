@@ -31,7 +31,7 @@ taxa_out <- Make_Taxa_Tables("combined_sequences_taxa.txt")
 Taxonomy_Plots(outtab$newtable)
 sequence_count_table <- read.delim("sequence_process_summary.txt", row.names=1)
 sequence_count_plot(sequence_count_table)
-diversity(outtab$newmap,outtab$newtable)
+brayWmeta <- diversity(outtab$newmap,outtab$newtable)
 Diversity_Plots(brayWmeta, outtab$newmap)
 ```
 
@@ -53,7 +53,6 @@ input | output
 seqtab_nochim.rds | Sequence_table_common.rds
 metadata.txt | Metadata_common.txt
 taxID.rds | combined_taxa.txt
-
 
 **Make_Taxa_Tables.R**
 input | output

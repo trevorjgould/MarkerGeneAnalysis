@@ -1,9 +1,6 @@
 #' Make Taxa Tables
-#'
 #' This function creates taxa tables from dada2 output
-#'
-#' @param newmap (Required).
-#'  table of metadata processed by Make_Tables.
+#' table of metadata processed by Make_Tables.
 #'
 #' @export
 #' @importFrom plyr ddply

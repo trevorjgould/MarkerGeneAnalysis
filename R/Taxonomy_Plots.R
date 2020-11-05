@@ -2,12 +2,10 @@
 #'
 #' This function creates plots that summarize prevalent taxa
 #'
-#'
-#' @param meta (Required)
-#'  table of metadata.
+#' table of metadata.
 #'
 #' @export
-#' @importFrom utils read.table
+
 
 # avoiding no visible binding for global variable
 value <- variable <- Samples <- NULL
