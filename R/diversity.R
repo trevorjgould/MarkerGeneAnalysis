@@ -48,6 +48,7 @@ var_explained = format(round(var_explained, 2), nsmall = 2)
 newmap$EV <- d.mes$sdev^2
 brayWmeta <- cbind(newmap,d.mes$x[,1:4])
 
+
 #alpha_diversity_stats
 propdist <- sweep(newtable, 1, rowSums(newtable),'/')
 brayWmeta$shannon <- vegan::diversity(propdist, index = "shannon")
