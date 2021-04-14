@@ -2,11 +2,11 @@
 #' This function creates taxa tables from dada2 output
 #' table of metadata processed by Make_Tables.
 #'
-#' @export
 #' @importFrom plyr ddply
 #' @importFrom stats setNames
 #' @importFrom utils read.table
 #' @importFrom utils write.table
+#' @export
 
 # avoiding no visible binding for global variable
 domain <- phylum <- family <- genus <- species <- NULL
